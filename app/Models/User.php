@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 use Laravel\Sanctum\HasApiTokens;
+use Carbon\Carbon;
 
 class User extends Authenticatable
 {
@@ -22,7 +23,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'cedula','fecha_de_nacimiento','city_id','celular',
     ];
+
+    protected $appends = ['age'];
+    
 
     /**
      * The attributes that should be hidden for serialization.
@@ -42,4 +47,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getAgeAttribute()
+    {
+        return Carbon::parse($this->fecha_de_nacimiento)->age;
+    
+    }
+
+    public function city(){
+       return $this->belongsTo('App\Models\City'::class, 'city_id');
+      }
+     
+
 }

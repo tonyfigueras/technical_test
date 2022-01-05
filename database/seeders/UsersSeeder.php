@@ -19,6 +19,10 @@ class UsersSeeder extends Seeder
             'email'             => 'default@gmail.com',
             'password'          => bcrypt('12345678'),
             'email_verified_at' => now(),
+            'celular'           => '4268856585',
+            'cedula'            => '15933492',
+            'fecha_de_nacimiento'    => '1985-10-18',
+            'city_id'      => '10'
             ])->assignRole('admin');
 
         
