@@ -65,3 +65,4 @@ MAIL_PASSWORD=41176a57d390a2
 MAIL_ENCRYPTION=tls
 MAIL_FROM_ADDRESS=e3b2b1fd08-59cd7b@inbox.mailtrap.io
 MAIL_FROM_NAME="${APP_NAME}"
+* Para ingresar al sistema los datos de ADMIN son:  usuario: default@gmail.com y clave: 12345678
