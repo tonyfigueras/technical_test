@@ -55,7 +55,7 @@
 * npm install
 * npm run dev
 * php artisan serve
-* Para programar o enviar los correos ejecutar el siguiente comando artisan: php artisan queue:work
+* Para programar o enviar los correos ejecutar el siguiente comando artisan: php artisan queue:work NOTA: Si despues de ejecutar el comando les da error que el envio ha sido fail, recomiendo ejecutar los siguentes comandos php artisan cache:clear, php artisan config:clear, and php artisan config:cache y php artisan optimize:clear y luego ejecutar el comando para php artisan queue:work
 * Credenciales para el envio de emails desde mailtrap
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.mailtrap.io
