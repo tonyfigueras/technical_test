@@ -43,7 +43,7 @@ class SendEmailJob implements ShouldQueue
             'mensaje'=> $this->email->mensaje,
             'destino'=> $this->email->destino,
            );
-        $email = new SendMail( $this->email);
+        $email = new SendMail( $data);
         Mail::to($this->email->destino)->send($email);
       
         $mail = Email::where('id',$this->email->id)->first();
