@@ -1,66 +1,68 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## <h1>  aplicación web que permite administrar la información de sus usuarios, y realizar el envío de emails </h1>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<img src="https://user-images.githubusercontent.com/37219277/146828188-b808db39-7637-4fcd-8029-99b8f8d8d640.png" style="max-width: 100%;">
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<img src="https://user-images.githubusercontent.com/37219277/148391786-3b9b3904-0a1f-479e-a181-b6e043859826.png" style="max-width: 100%;">
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<img src="https://user-images.githubusercontent.com/37219277/148392124-e29cd42c-ea29-46b7-85e9-ba370a2bfab7.png" style="max-width: 100%;">
 
-## Learning Laravel
+<img src="https://user-images.githubusercontent.com/37219277/148392734-92cda92d-a9d3-40b5-ae2c-20992ab1ff11.png" style="max-width: 100%;">
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+<img src="https://user-images.githubusercontent.com/37219277/148393279-f4c56126-f528-41a7-8dd6-f00a500b9905.png" style="max-width: 100%;">
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
+<img src="https://user-images.githubusercontent.com/37219277/148393794-210ee878-9c2b-4013-8fbf-0757b2b6a7f6.png" style="max-width: 100%;">
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+<img src="https://user-images.githubusercontent.com/37219277/148395494-7d8dd3ae-a2e3-4a88-9b0f-ae2531745a2c.png" style="max-width: 100%;">
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Especificación técnica
 
-## License
+* Laravel 8
+* Vue 2
+* AdminLTE 3 
+* Vutify
+* Axios
+* Sweetalert2
+* vue-router
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Caracteristicas
+
+* Seeders con usuario admin, Country, State y City
+* Administrador: Puede Crear + Editar + Eliminar basado en modal y con Sweetalert, Lista con paginación, Buscador de usuarios. Ver todos los E-mails de todos los usuarios que se han enviado y los que no se han enviado
+* Usuario: Puede enviar email y listar los emails que el ha enviado y los que no se han enviado
+.
+
+### Instalación
+
+* git clone https://github.com/tonyfigueras/technical_test.git
+* cd technical_test/
+* composer install
+* npm install
+* modificar el archivo .env.example a .env
+* Actualice .env y configure las credenciales de su base de datos
+* php artisan key:generate
+* php artisan migrate:fresh --seed NOTA: PUEDE TARDAR UN POCO EN CARGAR LOS SEEDER DEBIDO A QUE TAMBIEN SE CARGARGAN LOS PAISES CON SUS ESTADOS Y CIUDADES DEL MUNDO
+* npm install
+* npm run dev
+* php artisan serve
+* Para programar o enviar los correos ejecutar el siguiente comando artisan: php artisan queue:work
+* Credenciales para el envio de emails desde mailtrap
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=d78585ab532587
+MAIL_PASSWORD=41176a57d390a2
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=e3b2b1fd08-59cd7b@inbox.mailtrap.io
+MAIL_FROM_NAME="${APP_NAME}"
+* Para ingresar al sistema los datos de ADMIN son:  usuario: default@gmail.com y clave: 12345678
