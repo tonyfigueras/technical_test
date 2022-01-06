@@ -25,6 +25,7 @@ Vue.use(VueRouter)
 
 let routes = [
 	{ path: '/dashboard', component: require('./components/Dashboard.vue').default },
+  { path: '/home', component: require('./components/Dashboard.vue').default },
 	{ path: '/user', component: require('./components/User/Load/template.vue').default },
   { path: '/useremail', component: require('./components/User/Views_Email/template.vue').default },
   { 
