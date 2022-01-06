@@ -70,6 +70,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
          Ud. ha ingresado como: @if(@Auth::user()->hasRole('admin'))
             <h4>Administrador</h4>
         @endif
+        @if(@Auth::user()->hasRole('users'))
+            <h4>Usuario</h4>
+        @endif
         <div class="dropdown-divider"></div>
             Nombre:  {{ Auth::user()->name }}
              <div class="dropdown-divider"></div>
@@ -141,16 +144,53 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 Usuarios
               </p>
             </router-link>
-          </li>@endif
-           @if(@Auth::user()->hasRole('users'))
-            <li class="nav-item">
-            <router-link to="/user" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+          </li>
+          <li class="nav-item">
+            <router-link to="/useremail" class="nav-link">
+              <i class="nav-icon fas fa-eye"></i>
               <p>
-                E-mail
+                Views E-mails
               </p>
             </router-link>
-          </li>@endif
+          </li>
+          @endif
+           @if(@Auth::user()->hasRole('users'))
+             <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>
+                Email
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+          
+            <router-link :to="{name: '/email', 
+            params: {id_user: '{{Auth::user()->id}}' }}"  class="nav-link">
+             <i class="nav-icon fas fa-paper-plane"></i>
+              <p>
+                Send
+              </p>
+            </router-link>
+          </li>
+               <li class="nav-item">
+          
+            <router-link  :to="{name: '/emailviews', 
+            params: {id_user: '{{Auth::user()->id}}' }}"  class="nav-link">
+             <i class="nav-icon fas fa-eye"></i>
+              <p>
+                View
+              </p>
+            </router-link>
+          </li>
+            </ul>
+          </li>
+            
+            
+            
+            
+           @endif
           <li class="nav-item">
             
             <a class="nav-link" href="{{ route('logout') }}"

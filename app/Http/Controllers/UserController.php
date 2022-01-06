@@ -24,7 +24,7 @@ class UserController extends Controller
         }
       
 
-      $User = User::role('users')->where(function($q) use ($seh) {
+      $User = User::role(['users','admin'])->where(function($q) use ($seh) {
         $q->where('name', 'like', "%$seh%")
             ->orWhere('cedula', 'LIKE', "%$seh%")
             ->orWhere('celular', 'LIKE', "%$seh%")

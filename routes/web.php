@@ -31,6 +31,13 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::post('edit/{id}', 'App\Http\Controllers\UserController@edit');
     Route::delete('delete/{id}', 'App\Http\Controllers\UserController@delete');
     Route::post('alluser', 'App\Http\Controllers\UserController@index');
+    Route::post('allmail', 'App\Http\Controllers\MailController@allmail');
+});
+
+Route::group(['middleware' => ['role:users']], function () {
+    //rutas accesibles solo para usuarios
+    Route::post('/send', 'App\Http\Controllers\MailController@send');
+    Route::post('allemail', 'App\Http\Controllers\MailController@index');
 });
 
 
