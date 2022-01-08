@@ -9,7 +9,7 @@ class City extends Model
 {
     use SoftDeletes;
     protected $fillable = [
-        'id','state_id', 'name', 'status'
+        'id','state_id', 'name'
     ];
     public function state()
     {

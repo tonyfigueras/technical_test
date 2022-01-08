@@ -9,7 +9,7 @@ class Country extends Model
 {
     use SoftDeletes;
     protected $fillable = [
-        'id', 'name', 'status','iso_code2', 'iso_code3', 'num_code'
+        'id', 'name', 'code','phonecode'
     ];
     
    
